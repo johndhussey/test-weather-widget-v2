@@ -1,0 +1,17 @@
+{
+  "name": "test-weather-widget",
+  "version": "1.0.0",
+  "description": "Simple weather widget built with Bitvagrant AI",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "start": "open index.html"
+  },
+  "keywords": ["weather", "widget", "javascript", "html", "css"],
+  "author": "Bitvagrant AI",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:johndhussey/test-weather-widget.git"
+  }
+}

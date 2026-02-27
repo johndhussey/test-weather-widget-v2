@@ -68,10 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Fun easter egg - double click for random city
 document.addEventListener('dblclick', () => {
-    const cities = ['Berlin', 'Paris', 'Tokyo', 'Sydney', 'New York', 'London'];
+    const cities = ['Berlin', 'Paris', 'Tokyo', 'Sydney', 'New York', 'London', 'Munich', 'Dublin'];
     const randomCity = cities[Math.floor(Math.random() * cities.length)];
     document.getElementById('city').textContent = randomCity;
     
-    // Simulate random weather
-    document.getElementById('temp').textContent = `${Math.floor(Math.random() * 30 - 5)}°`;
+    // Simulate random weather with more realistic ranges
+    const temp = Math.floor(Math.random() * 35 - 10); // -10 to 25°C
+    const humidity = Math.floor(Math.random() * 40 + 40); // 40-80%
+    const wind = Math.floor(Math.random() * 25 + 5); // 5-30 km/h
+    
+    document.getElementById('temp').textContent = `${temp}°`;
+    document.getElementById('humidity').textContent = `${humidity}%`;
+    document.getElementById('wind').textContent = `${wind} km/h`;
+    document.getElementById('feels').textContent = `${temp - 2}°`;
+    document.getElementById('description').textContent = 'Simulated Weather';
 });
